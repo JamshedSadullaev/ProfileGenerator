@@ -15,7 +15,7 @@ test('it should get the id from the getId() method',() => {
  test('it should get the email from the getEmail() method', ()=>{
     expect(intern.getEmail()).toBe('james@gmail.com');
  });
- test('it should get the officeNumber from the getofficeNumber() method', ()=>{
+ test('it should get the school name from the getSchool() method', ()=>{
     expect(intern.getSchool()).toBe('University');
  });
  test('it should get the role from the getRole() method',()=>{
