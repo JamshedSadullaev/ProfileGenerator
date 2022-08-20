@@ -8,16 +8,16 @@ const util = require("util");
 const generateSite  = require("./src/GenerateHtml");
 const writeFileAsync = util.promisify(fs.writeFile);
 
-let teamArray = [];
-let teamString =``;
+let array = [];
+let string =``;
 // function to generate question 
 async function main () {
     try{
         await prompt()
-        for (let i = 0; i<teamArray.length; i++){
-            teamString = teamString + generateSite.generateTemplate(teamArray[i]);
+        for (let i = 0; i<array.length; i++){
+            string = string + generateSite.generateTemplate(array[i]);
         }
-        let finalHtml = generateSite.generateHtml(teamString);
+        let finalHtml = generateSite.generateHtml(string);
         writeFileAsync('./dist/index.html',finalHtml);
         console.log();
         console.log("Profile has been created succesfully")
@@ -62,7 +62,7 @@ async function prompt () {
                     message:'What is the employees github name',
                 }, ]);
                 const engineer = new Engineer(response.name,response.id,response.email,response2.name);
-                teamArray.push(engineer);
+                array.push(engineer);
             }else if (response.role ==="Manager"){
                 response2 =await inquirer.prompt ([{
                     type:'input',
@@ -70,7 +70,7 @@ async function prompt () {
                     message:'What is the office number?',
                 }, ]);
                 const manager = new Manager(response.name,response.id,response.email,response2.name);
-                teamArray.push(manager);
+                array.push(manager);
             }else if (response.role ==="Intern"){
                 response2 =await inquirer.prompt ([{
                     type:'input',
@@ -78,7 +78,7 @@ async function prompt () {
                     message:'What is your school name?',
                 },]);
                 const intern = new Intern (response.name,response.id,response.email,response2.name);
-                teamArray.push(intern);
+                array.push(intern);
             }
         }catch(err){
             return console.log(err);

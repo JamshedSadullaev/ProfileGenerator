@@ -1,4 +1,4 @@
-const generateHtml = function (teamString) {
+const generateHtml = function (string) {
     return `<!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +20,7 @@ const generateHtml = function (teamString) {
 </div>
 <div class="container ">
     <div class="row d-flex justify-content-around">
-        ${teamString}
+        ${string}
 </div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cup-hot" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5ZM2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175Z"/>
@@ -64,7 +64,7 @@ const generateTemplate = function (arr) {
     <div class="card-body list-group list-group-flush">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${arr.id}</li>
-            <li class="list-group-item"><a href="https://gmail.com/">Email:${arr.email}</a></li>
+            <li class="list-group-item">Email:<a href="#mail:${arr.email}@gmail.com">${arr.email}</a></li>
             <li class="list-group-item">${info}</li>
           </ul>
 
