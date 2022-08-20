@@ -187,3 +187,5 @@ You are required to submit the following for review:
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Video link:https://drive.google.com/file/d/1GjB4chWhzXxwXWqf--sxrF9B4kP67Z7O/view
+Github repo:https://github.com/JamshedSadullaev/ProfileGenerator
